@@ -13,11 +13,11 @@ function splitString(str)
    end
    return lines
 end
- 
+
 function motor(amt, color)
    i = 1
    while (i <= amt) do
-      term.write(i)
+      print(i)
       redstone.setBundledOutput("back", color)
       os.sleep(delay)
       redstone.setBundledOutput("back", 0)
@@ -28,12 +28,12 @@ end
  
 function up(i)
    motor(i, colors.blue)
-   term.write("up")
+   print("up\n")
 end
  
 function down(i)
    motor(amt, color)
-   term.write("down")
+   print("down")
 end
  
 while (true) do
@@ -72,7 +72,7 @@ while (true) do
             up(tonumber(msg[4]))
          end
          if (msg[3] == "down") then
-            term.write("'" .. msg[4] .. "'")
+            print("'" .. msg[4] .. "'")
             down(tonumber(msg[4]))
          end
       end
