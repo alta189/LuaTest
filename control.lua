@@ -32,7 +32,7 @@ function up(i)
 end
  
 function down(i)
-   motor(amt, color)
+   motor(i, colors.black)
    print("down")
 end
  
