@@ -17,7 +17,7 @@ while (true) do
       end
     end
   end
-  redstone.setOutput("back", found)
+  redstone.setOutput("back", not found)
 end
  
 term.restore()
