@@ -1,6 +1,7 @@
 os.loadAPI("ocs/apis/sensor")
 local prox = sensor.wrap("left")
 os.sleep(10)
+term.redirect(peripheral.wrap("left"))
 local targets = prox.getTargets()
 for name, details in pairs(targets) do
   print("Raining: " ..details["Name"])
@@ -8,3 +9,4 @@ for name, details in pairs(targets) do
     print(tostring(k)..": "..tostring(v))
   end
 end
+term.restore()
