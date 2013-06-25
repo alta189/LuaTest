@@ -12,7 +12,7 @@ while (true) do
       --print("X: " .. math.floor(details["Position"]["X"]) .. ", Z: " .. math.floor(details["Position"]["Z"]))
       local x = math.floor(details["Position"]["X"])
       local z =  math.floor(details["Position"]["Z"])
-      if ((x >= -3 and x <= 5) and (z >= -7 and x <= 4)) then
+      if ((x >= -3 and x <= 7) and (z >= -7 and x <= 4)) then
          found = true
       end
     end
