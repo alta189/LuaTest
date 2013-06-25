@@ -1,12 +1,13 @@
 os.loadAPI("ocs/apis/sensor")
 local prox = sensor.wrap("left")
-os.sleep(10)
-term.redirect(peripheral.wrap("left"))
-local targets = prox.getTargets()
-for name, details in pairs(targets) do
-  print("Raining: " ..details["Name"])
-  for k, v in pairs(prox.getTargetDetails(name)) do
-    print(tostring(k)..": "..tostring(v))
-  end
+
+term.redirect(peripheral.wrap("right"))
+
+while (true) do
+  local targets = prox.getTargets()
+  for name, details in pairs(targets) do
+    print("Detected: " ..name)
+    print("Position: " textutils.serialize(details["Position"]))
 end
+
 term.restore()
