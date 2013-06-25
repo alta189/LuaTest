@@ -1,5 +1,5 @@
 os.loadAPI("ocs/apis/sensor")
-local prox = sensor.wrap("back")
+local prox = sensor.wrap("left")
 local targets = prox.getTargets()
 for name, details in pairs(targets) do
   print("Raining: " ..details["Name"])
